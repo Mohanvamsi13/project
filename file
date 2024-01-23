@@ -1,4 +1,5 @@
 pipeline
 {
+    pool name < >
     agent< >
 }
