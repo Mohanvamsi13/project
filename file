@@ -1,5 +1,6 @@
 pipeline
 {
     pool name < >
+vm image <image name>
     agent< >
 }
