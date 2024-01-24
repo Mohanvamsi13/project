@@ -1,0 +1,7 @@
+pipeline
+{
+    pool name < >
+vm image <image name>
+pool <pool name>
+    agent< >
+}
