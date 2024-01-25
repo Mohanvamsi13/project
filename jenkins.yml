@@ -1,0 +1,59 @@
+
+pipeline
+{
+  agent any
+
+  stages
+  {
+
+  stage('checkout')
+    {
+       steps
+       { 
+       echo 'pipeline automation'
+       } 
+   }
+
+   stage('Build')
+   {
+      steps
+      {
+        echo 'building'
+      }
+   }
+
+   stage('Test')
+   {
+       steps
+       {
+        echo 'testing'
+       }
+   }
+
+   stage('sonarcubeanalysis')
+   {
+      steps
+      { 
+        echo 'sonar analysis'
+      }
+   }
+
+   stage('artifacts generation and storage')
+   {
+      steps
+      {
+       echo 'storing and generating artifacts'
+      }
+   }
+
+   stage('continuous deployment')
+   {
+      steps
+      {
+        echo 'pushing articfacts and deploying code in multiple environments'
+      }
+   }
+ 
+ }
+
+}
