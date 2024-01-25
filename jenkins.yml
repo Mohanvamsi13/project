@@ -1,5 +1,8 @@
+
 pipeline
 {
+  agent any
+
   stages
   {
 
@@ -7,8 +10,8 @@ pipeline
     {
        steps
        { 
-       //checkout the code from a version control system
-       checkout scm
+        //check
+       echo 'pipeline automation'
        } 
    }
 
@@ -16,8 +19,7 @@ pipeline
    {
       steps
       {
-        //Build the project (replace with your build commands)
-        sh 'mvn clean package'
+        echo 'building'
       }
    }
 
@@ -25,8 +27,7 @@ pipeline
    {
        steps
        {
-        // Run tests (replace with your test commands)
-        sh 'mvn test'
+        echo 'testing'
        }
    }
 
@@ -34,7 +35,7 @@ pipeline
    {
       steps
       { 
-        //scan reports
+        echo 'sonar analysis'
       }
    }
 
@@ -42,7 +43,7 @@ pipeline
    {
       steps
       {
-        //we get the binary and deployable artifacts
+       echo 'storing and generating artifacts'
       }
    }
 
@@ -50,10 +51,7 @@ pipeline
    {
       steps
       {
-        //retrevial of artifacts
-        //environment provisioning (dev-test-uat-staging-prod)
-        //deployment(target environment)
-        //production environment(finally into market)
+        echo 'pushing articfacts and deploying code in multiple environments'
       }
    }
  
